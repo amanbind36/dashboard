@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/6d68a53abf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.csss">
+</head>
+<style>
+    body {
+        display: flex;
+    }
+
+    .leftbar {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+
+        width: 100px;
+        height: 100vh;
+        overflow: hidden;
+        background-color: rgb(10, 88, 108);
+    }
+
+    .leftbar:hover {
+        width: 350px;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+
+    .logo {
+        height: 80px;
+
+        width: 80%;
+        margin: auto;
+    }
+
+    .ulbar {
+        width: 70%;
+        margin: auto;
+        list-style: none;
+        height: 80%;
+
+
+    }
+
+    .ulbar>li {
+        margin-left: -20px;
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 15px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .ulbar>li:hover,
+    .active {
+        background: rgb(99, 201, 191);
+    }
+
+    .ulbar>li>a {
+        font-size: 17px;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: white;
+    }
+
+    .ulbar>li>a>span {
+        overflow: hidden;
+    }
+
+    .ulbar>li>a>i {
+        font-size: 30px;
+    }
+
+    .rightbar {
+        position: relative;
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(226,210,173,1) 100%);
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile {
+        width: 99%;
+        height: 70px;
+        border-radius: 9px;
+        margin: auto;
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(218,166,211,1) 100%);
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .profile {
+margin-top: -5px;
+        align-items: center;
+      padding:0px 10px 0px 10px ;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .circle {
+        width: 40px;
+        margin-top: -10px;
+        height: 40px;
+        border-radius: 50%;
+
+    }
+    .logoimg{
+        position: sticky;
+    }
+
+    .dr {
+        display: flex;
+        gap: 10px;
+    }
+
+    .main {
+
+        display: flex;
+        width: 99%;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .left {
+        width: 30%;
+    }
+
+    .right {
+        height: 100vh;
+        width: 66%;
+    }
+
+    .left>div {
+
+        align-items: center;
+
+        width: 100%;
+        background-color: white;
+    }
+
+    .down {
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .profileimg {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .leftimg {
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 36%;
+        padding: 10px 0 0 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .table {
+        margin: auto;
+
+        text-align: justify;
+        line-height: 1px;
+    }
+
+    .cardmain {
+        text-align: center;
+
+color: white;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cardmain>div {
+        border-radius: 10px;
+cursor: pointer;
+        width: 32%;
+        height: 100%;
+    }
+
+    .cardmain>div>i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .report {
+        border-radius: 10px;
+        padding: 2px 0 0 5px ;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 100%;
+  
+        
+    }
+    .first{
+        background-color: rgb(121, 121, 234);;
+    }
+    .second{
+        background-color: greenyellow;
+    }
+    .third{
+        background-color: blueviolet;
+    }
+
+    .reportcard {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cardmain>div:hover{
+        color: black;
+        transform: scale(1.1);
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .reportcard>div {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        gap: 20px;
+        width: 32%;
+        height: 100%;
+    }
+   
+
+    .reportcard>div>i {
+        font-size: 35px;
+    }
+    .reportcard>div:hover,.add:hover{
+        color: white;
+        background-color: blueviolet;
+        border: 1px solid greenyellow;
+    }
+
+    .prescription {
+        border-radius: 10px;
+        padding: 2px 0 0 4px ;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        width: 100%;
+        height: 280px;
+     
+    }
+    .prescription:hover,.report:hover,.down:hover,.leftimg:hover{
+        cursor: pointer;
+        padding: 3px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    .prescription>table{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .tablepre{
+        line-height: 30px;
+ 
+    }
+    .tablepre>tr:hover{
+        text-decoration-color: white;
+        color: red;
+    }
+
+    .add {
+        text-align: center;
+        border-color: greenyellow;
+        border-style: dotted;
+    }
+  
+/* CSS */
+.button-9 {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 42px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 30%;
+}
+
+.button-9:disabled {
+  cursor: default;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+.hamburger-menu{
+    display: none;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 450px) {
+  
+    body{
+        display: block;
+        overflow-x: block;
+    }
+    /* .leftbar {
+ display: block;
+        top: 0;
+        bottom: 0;
+
+        width: 100%;
+    
+       
+        background-color: rgb(10, 88, 108);
+    } */
+    .rightbar {
+      margin: auto;
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(226,210,173,1) 100%);
+        width: 96%;
+        
+    }
+
+    .profile {
+        width: 96%;
+        height: 70px;
+        border-radius: 9px;
+        margin: auto;
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(218,166,211,1) 100%);
+
+    }
+
+    .profile {
+margin-top: -5px;
+        align-items: center;
+     
+    }
+    .hide{
+        display: none;
+    }
+    .main {
+
+display: block;
+width: 99%;
+justify-content: space-between;
+margin: auto;
+}
+
+.left {
+width: 99%;
+}
+
+.right {
+    margin-top: 20px;
+height: 100vh;
+width: 99%;
+}
+.reportcard {
+    height: 250px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .reportcard>div {
+        align-items: center;
+        text-align: center;
+        display: block;
+        gap: 20px;
+        width: 32%;
+       height: 150px;
+       background-color: white;
+    }
+    .prescription {
+        margin-top: 50px;
+        border-radius: 10px;
+        padding: 2px 0 0 4px ;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        width: 100%;
+        height: 280px;
+     
+    }
+    .reportcard>div>i{
+        margin-top: 50px;
+    }
+    .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+.leftbar {
+    display: none;
+  }
+  .leftbar{
+    width: 100%;
+  }
+  
+  .leftbar.active {
+   z-index: 1;
+
+  
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    background-color: #333;
+    width: 90%;
+  }
+
+}
+</style>
+
+<body>
+    <div class="leftbar">
+        <div class="logo">
+            <img class="logoimg" width="80px" src="https://img.freepik.com/free-vector/infinity-logo-vector-icon_126523-243.jpg?size=626&ext=jpg&ga=GA1.2.753039940.1691665470&semt=ais" alt="">
+        </div>
+
+        <ul class="ulbar">
+
+            <li class="active">
+                <a href="">
+
+                    <i class="fa-solid fa-gauge"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Next Appointent</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>FAQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Setting</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-address-card"></i>
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="rightbar">
+        <div class="profile">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            <div class="hide">
+                <i class="fa fa-arrow-circle-left"></i>
+
+                <span>Back to dashboard</span>
+
+
+            </div>
+            <div class="dr">
+                <i class="fa-solid fa-bell"></i>
+                <span>
+                    <img class="circle"
+                        src="https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="">
+                </span>
+                <span>Dr. Ramesh Chandra</span>
+               
+            </div>
+        </div>
+        <h2 >Current Appointment</h2>
+        <div class="main">
+            <div class="left">
+                <div class="leftimg">
+
+                    <img class="profileimg" height="100%" width="100%"
+                        src="https://media.istockphoto.com/id/1370889189/photo/portrait-of-happy-caucasian-man-smiling-for-the-camera-while-working-in-the-office.webp?b=1&s=170667a&w=0&k=20&c=_yMAy66VxxovkQ3MceAx9YRZZ6wNRj24sDweuBndlDY="
+                        alt="">
+                    <h3>Tom Scott</h3>
+                    <p>Age:36</p>
+                    <button class="button-9">Update</button>
+
+                </div>
+                <div class="down">
+                    <h3 style="margin-left: 10px;">Information</h3>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h4>Gender:</h4>
+                            </td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Blood Type:</h4>
+                            </td>
+                            <td>O+ Positive</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Allergies:</h4>
+                            </td>
+                            <td>Milk, Penicillin</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Diseases:</h4>
+                            </td>
+                            <td>Diabetes, Blood Disorder</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Height:</h4>
+                            </td>
+                            <td>1.78m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Weight:</h4>
+                            </td>
+                            <td>65kg</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Patient ID:</h4>
+                            </td>
+                            <td>20999755</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Last Visit:</h4>
+                            </td>
+                            <td>25 Oct 2023</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="right">
+                <div class="cardmain">
+                    <div class="first">
+                        <i style="color: red;" class="fa-solid fa-heart-pulse"></i>
+                        <h3>Heart Rate</h3>
+                        <h1>80bpm</h1>
+                    </div>
+                    <div class="second">
+                        <i class="fa-solid fa-temperature-half"></i>
+                        <h3>Body Temprature</h3>
+                        <h1>36.5 dc</h1>
+                    </div>
+                    <div class="third">
+                        <i class="fa-solid fa-bottle-droplet"></i>
+                        <h3>Glucose</h3>
+                        <h1>100mg/dl</h1>
+                    </div>
+                </div>
+                <br>
+                <div class="report">
+                    <h3>Test Report</h3>
+                    <div class="reportcard">
+                        <div>
+                            <i style="color: red;" class="fa-solid fa-book"></i>
+                            <span>CT Scan-Full Body <br>
+                                <p>12th February 2023</p>
+                            </span>
+
+                        </div>
+                        <div>
+                            <i style="color: rgb(190, 190, 43);" class="fa-solid fa-book"></i>
+                            <span>Creation Kinase T <br>
+                                <p>12th February 2023</p>
+                            </span>
+                        </div>
+                        <div>
+                            <i style="color: greenyellow;" class="fa-solid fa-book"></i>
+                            <span>Eye Fluorescein Test <br>
+                                <p>12th February 2023</p>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="prescription">
+                    <h3>Prescriptions</h3>
+                    <div class="add">
+                        <h3 style="color: greenyellow;">+ Add a Prescriptions</h3>
+                    </div>
+                    <table class="tablepre" >
+                        <tr>
+                            <th>Prescriptions</th>
+                            <th>Date</th>
+                            <th>Duration</th>
+                        </tr>
+                        <tr>
+                            <td> <i style="color: rgb(190, 190, 43);" class="fa-solid fa-book"></i> Heart Disease</td>
+                            <td>25th October 2023</td>
+                            <td>3 months</td>
+                        </tr>
+                        <tr>
+                            <td><i style="color: rgb(190, 190, 43);" class="fa-solid fa-book"></i> Skin Care </td>
+                            <td>16th Augest 2023</td>
+                            <td>2 months</td>
+                        </tr>
+                        <tr>
+                            <td> <i style="color: rgb(190, 190, 43);" class="fa-solid fa-book"></i> Heart Disease</td>
+                            <td>25th October 2023</td>
+                            <td>3 months</td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function toggleMenu() {
+  var menu = document.querySelector('.leftbar');
+  menu.classList.toggle('active');
+}
+
+</script>
